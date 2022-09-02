@@ -1,0 +1,15 @@
+string $selCtrl[] = `ls -sl`;
+//Get values from Sourceï¿½
+float $srcTX = `getAttr ($selCtrl[0] + ".tx")`;
+float $srcTY = `getAttr ($selCtrl[0] + ".ty")`;
+float $srcTZ = `getAttr ($selCtrl[0] + ".tz")`;
+float $srcRX = `getAttr ($selCtrl[0] + ".rx")`;
+float $srcRY = `getAttr ($selCtrl[0] + ".ry")`;
+float $srcRZ = `getAttr ($selCtrl[0] + ".rz")`;
+//Translate values to Targetï¿½
+setAttr ($selCtrl[1] + ".tx") $srcTX;
+setAttr ($selCtrl[1] + ".ty") $srcTY;
+setAttr ($selCtrl[1] + ".tz") $srcTZ;
+setAttr ($selCtrl[1] + ".rx") $srcRX;
+setAttr ($selCtrl[1] + ".ry") $srcRY;
+setAttr ($selCtrl[1] + ".rz") $srcRZ;
